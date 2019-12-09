@@ -12,6 +12,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import CreateStudent from "./components/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
+import test from "./components/test";
+
 
 function App() {
   return (<Router>
@@ -21,8 +23,8 @@ function App() {
           <Container>
 
             <Navbar.Brand>
-              <Link to={"/create-student"} className="nav-link">
-                React MERN Stack App
+              <Link to={"/Student-list"} className="nav-link">
+                React Machine Down App
               </Link>
             </Navbar.Brand>
 
@@ -55,10 +57,11 @@ function App() {
           <Col md={12}>
             <div className="wrapper">
               <Switch>
-                <Route exact path='/' component={CreateStudent} />
+                <Route exact path='/' component={StudentList} />
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
+                <Route path="/test" component={test} />
               </Switch>
             </div>
           </Col>

