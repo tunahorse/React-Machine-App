@@ -13,6 +13,9 @@ import CreateStudent from "./components/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
 import test from "./components/test";
+import select from "./components/select";
+
+
 
 
 function App() {
@@ -31,7 +34,7 @@ function App() {
             <Nav className="justify-content-end">
               <Nav>
                 <Link to={"/create-student"} className="nav-link">
-                  Create Student
+                  Report a new issue
                 </Link>
               </Nav>
 
@@ -43,7 +46,7 @@ function App() {
 
               <Nav>
                 <Link to={"/student-list"} className="nav-link">
-                  Student List
+                  Issue List
                 </Link>
               </Nav>
             </Nav>
@@ -62,6 +65,9 @@ function App() {
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
                 <Route path="/test" component={test} />
+                <Route path="/select" component={select} />
+
+
               </Switch>
             </div>
           </Col>
