@@ -5,27 +5,15 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from 'react-bootstrap/Image';
 import axios from 'axios';
-
-
-
-
+import * as moment from 'moment'
 
 
 export default class Test extends React.Component {
 
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this);
 
 
-};
-
-
-handleClick({currentTarget}) { 
-  
- 
-  
-  console.log(currentTarget.value) // e.currentTarget.value would be equivalent
 };
 
 
@@ -34,16 +22,22 @@ handleClick({currentTarget}) {
   
   {
     const imageClick1 = () => {
+      
       console.log('Click');
       axios.post('https://api.telegram.org/bot1003390479:AAHzEzSbHQsEKTPhRn1jjHIeI1gfnzcTS8Y/sendMessage?chat_id=-1001270050860&text=IMBROKEN!', )
       .then(res => console.log(res.data))
       alert("Machine has been reported down!");
-      axios.post('http://localhost:4000/students/create-student',{
+axios.post('http://localhost:4000/students/create-student',
+            
+      {
+        name: 'Pill Pressing 1',
+        email: 'Flintstone@gmail.com',
+        rollno: 300
         
-name: 'fabian',
-email: 'Flintstone@gmail.com'
       })
       .then(res => console.log(res.data));
+
+   
       
     } 
     
@@ -54,9 +48,6 @@ return (
   <Row>
     <Col sm>      
     <Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded />
-    <button value="here!" onClick={this.handleClick}>   
-        Click me
-      </button>
 </Col>
     <Col sm></Col>
   </Row>
@@ -64,5 +55,4 @@ return (
     )
   }
 }
-
 
