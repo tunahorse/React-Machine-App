@@ -14,3 +14,11 @@ module.exports = {
 
 
 };
+
+
+
+module.exports = {
+  MongoURI:
+    `mongodb://fishj123:College1}@ds149885.mlab.com:49885/heroku_26921dvn`,
+    
+};
