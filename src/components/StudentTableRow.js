@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import * as moment from 'moment';
 
 export default class StudentTableRow extends Component {
 
@@ -18,6 +17,7 @@ export default class StudentTableRow extends Component {
     deleteStudent() {
         axios.delete('http://localhost:4000/students/delete-student/' + this.props.obj._id)
             .then((res) => {
+                alert("Machine has been removed from issue list!");
                 console.log('Student successfully deleted!')
             }).catch((error) => {
                 console.log(error)
@@ -28,13 +28,13 @@ export default class StudentTableRow extends Component {
         return (
             <tr>
                 <td>{this.props.obj.name}</td>
-                <td>{this.props.obj.email}</td>
+                {/* <td>{this.props.obj.email}</td> */}
                 <td>{this.props.obj.rollno}</td>
                 <td>
                     <Link className="edit-link" to={"/edit-student/" + this.props.obj._id}>
                         Edit
                     </Link>
-                    <Button onClick={this.deleteStudent} size="sm" variant="danger">Delete</Button>
+                    <Button onClick={this.deleteStudent} size="sm" variant="danger">Remove</Button>
                 </td>
             </tr>
         );

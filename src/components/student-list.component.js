@@ -38,8 +38,8 @@ export default class StudentList extends Component {
         <thead>
           <tr>
             <th>Machine</th>
-            <th>Email</th>
-            <th>Roll No</th>
+            {/* <th>Email</th> */}
+            <th>Time Stamp</th>
             <th>Action</th>
           </tr>
         </thead>

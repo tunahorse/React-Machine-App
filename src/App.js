@@ -34,7 +34,7 @@ function App() {
             <Nav className="justify-content-end">
               <Nav>
                 <Link to={"/create-student"} className="nav-link">
-                  Report a new issue
+                  Report A New Machine
                 </Link>
               </Nav>
 

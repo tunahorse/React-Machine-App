@@ -73,22 +73,22 @@ export default class EditStudent extends Component {
     return (<div className="form-wrapper">
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Name">
-          <Form.Label>Name</Form.Label>
+          <Form.Label>Machine Name</Form.Label>
           <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName} />
         </Form.Group>
 
-        <Form.Group controlId="Email">
+        {/* <Form.Group controlId="Email">
           <Form.Label>Email</Form.Label>
           <Form.Control type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
-        </Form.Group>
+        </Form.Group> */}
 
-        <Form.Group controlId="Name">
+        {/* <Form.Group controlId="Name">
           <Form.Label>Roll No</Form.Label>
           <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
-        </Form.Group>
+        </Form.Group> */}
 
-        <Button variant="danger" size="lg" block="block" type="submit">
-          Update Student
+        <Button variant="success" size="lg" block="block" type="submit">
+          Update Machine
         </Button>
       </Form>
     </div>);

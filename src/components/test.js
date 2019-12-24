@@ -31,26 +31,45 @@ axios.post('http://localhost:4000/students/create-student',
             
       {
         name: 'Pill Pressing 1',
-        email: 'Flintstone@gmail.com',
-        rollno: 300
+        rollno: moment().format('lll')
         
       })
       .then(res => console.log(res.data));
+}
+  
 
-   
+const imageClick2 = () => {
       
-    } 
-    
+  console.log('Click');
+ 
+}
+
 
 return (
       <Container>
 
   <Row>
-    <Col sm>      
-    <Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded />
-</Col>
-    <Col sm></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick2()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+    <Col sm><Image src="tdp-1.5-main.jpg"  onClick={() => imageClick1()} rounded /></Col>
+
   </Row>
+
+
+
+
+
+
+
 </Container>
     )
   }
