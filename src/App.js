@@ -27,7 +27,7 @@ function App() {
 
             <Navbar.Brand>
               <Link to={"/Student-list"} className="nav-link">
-                React Machine Down App
+                React Machine Down App Test 
               </Link>
             </Navbar.Brand>
 
